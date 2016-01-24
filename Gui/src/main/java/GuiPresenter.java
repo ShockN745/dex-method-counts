@@ -8,4 +8,14 @@ public class GuiPresenter implements GuiContract.Presenter {
     public GuiPresenter(GuiContract.View view) {
         this.view = view;
     }
+
+    @Override
+    public void startGui() {
+        view.launch();
+    }
+
+    @Override
+    public void openFilechooserButtonClicked() {
+        view.showFilechooser();
+    }
 }
